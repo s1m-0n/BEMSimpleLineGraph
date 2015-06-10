@@ -1422,7 +1422,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             prefix = [self.delegate popUpPrefixForlineGraph:self];
         }
         NSNumber *value = dataPoints[index];
-        NSString *formattedValue = [NSString stringWithFormat:self.formatStringForValues, value.doubleValue];
+        NSString *formattedValue = [NSString stringWithFormat:self.formatStringForValues, 5-value.doubleValue];
         self.popUpLabel.text = [NSString stringWithFormat:@"%@%@%@", prefix, formattedValue, suffix];
         self.popUpLabel.center = self.popUpView.center;
     }
